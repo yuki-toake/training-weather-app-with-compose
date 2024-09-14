@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_ok">OK</string>
+    <string name="ui_full_date_format">yyyy年MM月dd日</string>
+    <string name="ui_time_format">HH:mm</string>
+    <string name="ui_tomorrow_date_format">dd日</string>
+    <string name="ui_pop">降水確率</string>
+    <string name="ui_max_temp">最高気温：%.1f℃</string>
+    <string name="ui_min_temp">最低気温：%.1f℃</string>
+    <string name="ui_humidity">湿度：%d%%</string>
+    <string name="ui_error_loading_title">読み込みの失敗</string>
+    <string name="ui_error_loading_message">読み込みに失敗しました。</string>
+    <string name="ui_oss">オープンソースライセンス</string>
+
+    <string name="ui_content_description_back">戻る</string>
+    <string name="ui_content_description_menu">メニューを開く</string>
+</resources>
