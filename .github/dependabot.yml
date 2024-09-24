@@ -1,0 +1,30 @@
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    registries: "*"
+    labels: [ "version update" ]
+    groups:
+      kotlin-ksp:
+        patterns:
+          - "org.jetbrains.kotlin:*"
+          - "org.jetbrains.kotlin.jvm"
+          - "com.google.devtools.ksp"
+      android-gradle-plugin:
+        patterns:
+          - "com.android.tools:*"
+          - "com.android.tools.build:gradle"
+      jetpack-compose:
+        patterns:
+          - "com.google.accompanist:*"
+          - "androidx.compose:compose-bom"
+    open-pull-requests-limit: 10
+registries:
+  maven-google:
+    type: "maven-repository"
+    url: "https://maven.google.com"
+    replaces-base: true
