@@ -20,7 +20,11 @@ import com.github.takahirom.roborazzi.RoborazziOptions.CompareOptions
 import com.github.takahirom.roborazzi.RoborazziOptions.RecordOptions
 import com.github.takahirom.roborazzi.captureRoboImage
 import jp.co.greensys.weather.app.core.designsystem.theme.WeatherTheme
+import jp.co.greensys.weather.app.core.ui.LocalTimeZone
+import kotlinx.datetime.TimeZone
 import org.robolectric.RuntimeEnvironment
+
+private const val ZONE_ID = "Asia/Tokyo"
 
 @OptIn(ExperimentalRoborazziApi::class)
 val DefaultRoborazziOptions =
@@ -62,6 +66,7 @@ fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.c
     this.activity.setContent {
         CompositionLocalProvider(
             LocalInspectionMode provides true,
+            LocalTimeZone provides TimeZone.of(zoneId = ZONE_ID),
         ) {
             DeviceConfigurationOverride(
                 override = DeviceConfigurationOverride.DarkMode(isDarkMode = darkMode),
@@ -97,6 +102,7 @@ fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.c
     this.setContent {
         CompositionLocalProvider(
             LocalInspectionMode provides true,
+            LocalTimeZone provides TimeZone.of(zoneId = ZONE_ID),
         ) {
             WeatherTheme(
                 darkTheme = darkMode,
@@ -160,6 +166,7 @@ fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.c
         this.activity.setContent {
             CompositionLocalProvider(
                 LocalInspectionMode provides true,
+                LocalTimeZone provides TimeZone.of(zoneId = ZONE_ID),
             ) {
                 WeatherTheme(darkTheme = darkMode) {
                     key(darkMode) {
