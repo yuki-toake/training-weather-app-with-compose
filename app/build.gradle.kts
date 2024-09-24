@@ -43,6 +43,7 @@ dependencies {
     implementation(projects.core.data)
     implementation(projects.core.designsystem)
     implementation(projects.core.domain)
+    implementation(projects.core.ui)
     implementation(projects.feature.home)
     implementation(projects.feature.select)
 

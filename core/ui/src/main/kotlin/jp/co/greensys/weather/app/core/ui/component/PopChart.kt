@@ -28,6 +28,7 @@ import jp.co.greensys.weather.app.core.designsystem.theme.Orange
 import jp.co.greensys.weather.app.core.designsystem.theme.WeatherTheme
 import jp.co.greensys.weather.app.core.designsystem.theme.dimens
 import jp.co.greensys.weather.app.core.model.Forecast
+import jp.co.greensys.weather.app.core.ui.LocalTimeZone
 import jp.co.greensys.weather.app.core.ui.mock.PreviewForecastData
 
 @Composable
@@ -37,7 +38,7 @@ fun PopChart(
     label: String? = null,
     backgroundColor: Color = MaterialTheme.colorScheme.surfaceBright,
 ) {
-    val labels = list.map { it.date.toString(format = "H:mm") }
+    val labels = list.map { it.date.toString(format = "H:mm", timeZone = LocalTimeZone.current) }
     val entries = list.mapIndexed { index, forecast ->
         Entry(index.toFloat(), forecast.popPercent.toFloat())
     }

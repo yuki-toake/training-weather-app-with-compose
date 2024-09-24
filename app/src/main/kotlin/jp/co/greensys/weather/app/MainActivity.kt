@@ -6,11 +6,14 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dagger.hilt.android.AndroidEntryPoint
 import jp.co.greensys.weather.app.core.designsystem.theme.WeatherTheme
+import jp.co.greensys.weather.app.core.ui.LocalTimeZone
 import jp.co.greensys.weather.app.ui.WeatherApp
+import kotlinx.datetime.TimeZone
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -43,9 +46,12 @@ class MainActivity : ComponentActivity() {
                 )
                 onDispose {}
             }
-
-            WeatherTheme(darkTheme = darkTheme) {
-                WeatherApp()
+            CompositionLocalProvider(
+                LocalTimeZone provides TimeZone.currentSystemDefault(),
+            ) {
+                WeatherTheme(darkTheme = darkTheme) {
+                    WeatherApp()
+                }
             }
         }
     }

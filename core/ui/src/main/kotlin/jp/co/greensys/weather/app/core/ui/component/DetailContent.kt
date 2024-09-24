@@ -28,6 +28,7 @@ import jp.co.greensys.weather.app.core.designsystem.theme.WeatherTheme
 import jp.co.greensys.weather.app.core.designsystem.theme.dimens
 import jp.co.greensys.weather.app.core.model.Forecast
 import jp.co.greensys.weather.app.core.model.ForecastData
+import jp.co.greensys.weather.app.core.ui.LocalTimeZone
 import jp.co.greensys.weather.app.core.ui.R
 import jp.co.greensys.weather.app.core.ui.mock.PreviewForecastData
 
@@ -55,6 +56,7 @@ fun DetailContent(
                 Text(
                     text = forecastData.date.toString(
                         format = stringResource(id = R.string.ui_full_date_format),
+                        timeZone = LocalTimeZone.current,
                     ),
                 )
             }
@@ -82,6 +84,8 @@ fun DetailContentItem(
     forecast: Forecast,
     modifier: Modifier = Modifier,
 ) {
+    val timeZone = LocalTimeZone.current
+
     ListItem(
         headlineContent = {
             Row(
@@ -90,11 +94,15 @@ fun DetailContentItem(
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    val date = forecast.date.toString(format = stringResource(id = R.string.ui_time_format))
+                    val date = forecast.date.toString(
+                        format = stringResource(id = R.string.ui_time_format),
+                        timeZone = timeZone,
+                    )
                     if (date.startsWith(prefix = "00")) {
                         Text(
                             text = forecast.date.toString(
                                 format = stringResource(id = R.string.ui_tomorrow_date_format),
+                                timeZone = timeZone,
                             ),
                         )
                     }
