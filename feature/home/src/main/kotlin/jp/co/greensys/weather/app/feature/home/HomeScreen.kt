@@ -4,15 +4,18 @@ import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -161,23 +164,26 @@ fun HomeScreen(
         },
         modifier = modifier,
     ) { innerPadding ->
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
+        Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
-                .padding(paddingValues = innerPadding)
-                .fillMaxSize(),
+                .fillMaxSize()
+                .padding(paddingValues = innerPadding),
         ) {
-            WeatherButton(
-                onClick = onSelectClick,
-                text = { Text(text = stringResource(id = R.string.home_to_select)) },
-                leadingIcon = { Icon(imageVector = WeatherIcons.List, contentDescription = null) },
-            )
-            WeatherButton(
-                onClick = { onLocationClick(snackbarHostState) },
-                text = { Text(text = stringResource(id = R.string.home_to_location)) },
-                leadingIcon = { Icon(imageVector = WeatherIcons.Gps, contentDescription = null) },
-            )
+            Column(modifier = Modifier.width(intrinsicSize = IntrinsicSize.Max)) {
+                WeatherButton(
+                    onClick = onSelectClick,
+                    text = { Text(text = stringResource(id = R.string.home_to_select)) },
+                    leadingIcon = { Icon(imageVector = WeatherIcons.List, contentDescription = null) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                WeatherButton(
+                    onClick = { onLocationClick(snackbarHostState) },
+                    text = { Text(text = stringResource(id = R.string.home_to_location)) },
+                    leadingIcon = { Icon(imageVector = WeatherIcons.Gps, contentDescription = null) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
         }
     }
 
