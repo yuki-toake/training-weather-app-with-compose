@@ -50,9 +50,9 @@ androidx.compose.ui:ui-util:1.7.5
 androidx.compose.ui:ui:1.7.5
 androidx.compose:compose-bom:2024.10.01
 androidx.concurrent:concurrent-futures:1.1.0
-androidx.core:core-ktx:1.13.1
+androidx.core:core-ktx:1.15.0
 androidx.core:core-splashscreen:1.0.1
-androidx.core:core:1.13.1
+androidx.core:core:1.15.0
 androidx.cursoradapter:cursoradapter:1.0.0
 androidx.customview:customview-poolingcontainer:1.0.0
 androidx.customview:customview:1.0.0
@@ -95,7 +95,7 @@ androidx.resourceinspection:resourceinspection-annotation:1.0.1
 androidx.savedstate:savedstate-ktx:1.2.1
 androidx.savedstate:savedstate:1.2.1
 androidx.startup:startup-runtime:1.1.1
-androidx.tracing:tracing:1.0.0
+androidx.tracing:tracing:1.2.0
 androidx.vectordrawable:vectordrawable-animated:1.1.0
 androidx.vectordrawable:vectordrawable:1.1.0
 androidx.versionedparcelable:versionedparcelable:1.1.1
