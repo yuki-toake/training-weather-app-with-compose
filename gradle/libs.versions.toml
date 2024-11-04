@@ -7,7 +7,7 @@ appVersionName = "1.0.0"
 
 accompanist = "0.36.0"
 androidDesugarJdkLibs = "2.1.2"
-androidGradlePlugin = "8.7.1"
+androidGradlePlugin = "8.7.2"
 androidTools = "31.7.1"
 androidxActivity = "1.9.3"
 androidxAppcompat = "1.7.0"
