@@ -1,5 +1,5 @@
 package: name='jp.co.greensys.weather.app.debug' versionCode='1' versionName='1.0.0' platformBuildVersionName='14' platformBuildVersionCode='34' compileSdkVersion='34' compileSdkVersionCodename='14'
-sdkVersion:'26'
+minSdkVersion:'26'
 targetSdkVersion:'34'
 uses-permission: name='android.permission.ACCESS_FINE_LOCATION'
 uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'
