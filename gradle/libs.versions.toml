@@ -19,7 +19,7 @@ androidxLifecycle = "2.8.7"
 androidxNavigation = "2.8.5"
 androidxProfileinstaller = "1.4.1"
 androidxTestRules = "1.6.1"
-coil = "2.7.0"
+coil = "3.0.4"
 dependencyGuard = "0.5.0"
 gmsPlugin = "4.4.2"
 googleOss = "17.1.0"
@@ -68,7 +68,8 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxNavigation" }
 androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "androidxProfileinstaller" }
 androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "androidxTestRules" }
-coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+coil-kt-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 google-oss-licenses = { group = "com.google.android.gms", name = "play-services-oss-licenses", version.ref = "googleOss" }
 google-oss-licenses-plugin = { group = "com.google.android.gms", name = "oss-licenses-plugin", version.ref = "googleOssPlugin" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
