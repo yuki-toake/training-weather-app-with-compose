@@ -14,6 +14,7 @@ dependencies {
     api(libs.androidx.compose.runtime)
 
     implementation(libs.coil.kt.compose)
+    implementation(libs.coil.network.okhttp)
     implementation(projects.core.model)
 
     testImplementation(libs.hilt.android.testing)
