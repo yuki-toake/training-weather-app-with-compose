@@ -3,7 +3,7 @@ val ktlintVersion = "1.3.1"
 
 initscript {
     // https://github.com/diffplug/spotless/blob/main/plugin-gradle/CHANGES.md
-    val spotlessVersion = "6.25.0"
+    val spotlessVersion = "7.0.2"
 
     repositories {
         mavenCentral()
