@@ -137,10 +137,10 @@ io.coil-kt.coil3:coil:3.0.4
 jakarta.inject:jakarta.inject-api:2.0.1
 javax.inject:javax.inject:1
 org.jetbrains.compose.foundation:foundation:1.6.11
-org.jetbrains.kotlin:kotlin-stdlib-common:2.1.0
+org.jetbrains.kotlin:kotlin-stdlib-common:2.1.10
 org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21
 org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.21
-org.jetbrains.kotlin:kotlin-stdlib:2.1.0
+org.jetbrains.kotlin:kotlin-stdlib:2.1.10
 org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0
 org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0
 org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0
